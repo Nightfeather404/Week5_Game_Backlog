@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:paddingBottom="20dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.AddGame"
+    tools:showIn="@layout/activity_add_game">
+
+    <EditText
+        android:id="@+id/titleEditor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/title"
+        android:ems="10"
+        android:hint="@string/title"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/platformEditor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/description"
+        android:ems="10"
+        android:hint="@string/platformHint"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/platformLabel" />
+
+    <TextView
+        android:id="@+id/updateStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/statusLabel"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/statusSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/platformEditor" />
+
+    <Spinner
+        android:id="@+id/statusSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        android:entries="@array/gameStatus"
+        android:prompt="@string/dropdownPrompt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateStatusLabel" />
+
+    <TextView
+        android:id="@+id/platformLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/platformHint"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleEditor" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/title"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
